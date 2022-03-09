@@ -1,0 +1,5 @@
+apiVersion: v2
+keywords:
+- deployment_strategy=direct
+name: carts-generated
+version: 0.1.0
