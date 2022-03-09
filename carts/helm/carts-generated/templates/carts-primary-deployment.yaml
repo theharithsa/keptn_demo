@@ -22,12 +22,12 @@ spec:
         app.kubernetes.io/managed-by: Keptn
         app.kubernetes.io/name: carts-primary
         app.kubernetes.io/part-of: sockshop
-        app.kubernetes.io/version: 0.13.1
+        app.kubernetes.io/version: 0.13.3
     spec:
       containers:
       - env:
         - name: DT_CUSTOM_PROP
-          value: version=0.1.0 revision=1 releasename=sockshop-production-carts keptn_project=sockshop
+          value: version=0.1.0 revision=3 releasename=sockshop-production-carts keptn_project=sockshop
             keptn_service=carts keptn_stage=production keptn_deployment=primary
         - name: POD_NAME
           valueFrom:
@@ -38,7 +38,7 @@ spec:
             fieldRef:
               fieldPath: metadata.labels['deployment']
         - name: CONTAINER_IMAGE
-          value: docker.io/keptnexamples/carts:0.13.1
+          value: docker.io/keptnexamples/carts:0.13.3
         - name: KEPTN_PROJECT
           value: carts
         - name: KEPTN_STAGE
@@ -49,7 +49,7 @@ spec:
           value: carts
         - name: UNLEASH_SERVER_URL
           value: http://unleash.unleash-dev/api
-        image: docker.io/keptnexamples/carts:0.13.1
+        image: docker.io/keptnexamples/carts:0.13.3
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
