@@ -1,0 +1,7 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  creationTimestamp: null
+  name: carts-primary
+spec:
+  host: carts-primary.sockshop-production.svc.cluster.local
